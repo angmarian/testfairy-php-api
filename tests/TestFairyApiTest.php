@@ -60,7 +60,7 @@ class TestFairyApiTest extends \PHPUnit_Framework_TestCase
      */
     public function testFactoryEmptyArgs()
     {
-        TestFairyBasicAuthClient::factory(array());
+        TestFairyBasicAuthClient::factory();
     }
 
     /**
