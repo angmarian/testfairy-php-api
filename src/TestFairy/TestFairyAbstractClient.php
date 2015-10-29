@@ -79,10 +79,10 @@ abstract class TestFairyAbstractClient extends Client
     {
         $this->setDefaultOption(
             'auth',
-            [
+            array(
                 $user,
                 $password,
-            ]
+            )
         );
     }
 
@@ -102,5 +102,4 @@ abstract class TestFairyAbstractClient extends Client
             ]
         ];
     }
-
 }

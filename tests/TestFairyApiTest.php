@@ -60,7 +60,7 @@ class TestFairyApiTest extends \PHPUnit_Framework_TestCase
      */
     public function testFactoryEmptyArgs()
     {
-        TestFairyBasicAuthClient::factory([]);
+        TestFairyBasicAuthClient::factory(array());
     }
 
     /**
@@ -68,7 +68,7 @@ class TestFairyApiTest extends \PHPUnit_Framework_TestCase
      */
     public function testFactoryMissingArgs()
     {
-        TestFairyBasicAuthClient::factory(['email' => 'gil@megidish.net']);
+        TestFairyBasicAuthClient::factory(array('email' => 'gil@megidish.net'));
     }
 
     public function testMethods()
@@ -166,9 +166,9 @@ class TestFairyApiTest extends \PHPUnit_Framework_TestCase
 
         $newEmail = 'api-test-' . time() . '@example.com';
 
-        $newTester = $testfairy->addTester([
+        $newTester = $testfairy->addTester(array(
             'email' => $newEmail,
-        ]);
+        ));
 
         $lookForTester = null;
 

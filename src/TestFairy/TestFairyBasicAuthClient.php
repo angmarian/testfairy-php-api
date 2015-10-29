@@ -7,10 +7,10 @@ use Guzzle\Service\Client;
 class TestFairyBasicAuthClient extends TestFairyAbstractClient
 {
     /** @var array The required config variables for this type of client */
-    private static $required = [
+    private static $required = array(
         'email',
         'api_key',
-    ];
+    );
 
     /**
      * Magic method used to retrieve a command
