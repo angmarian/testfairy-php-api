@@ -93,13 +93,13 @@ abstract class TestFairyAbstractClient extends Client
      */
     public static function getDefaultConfig()
     {
-        return [
+        return array(
             'service_description' => __DIR__ . '/Service/config/testfairy.json',
-            'headers' => [
+            'headers' => array(
                 'Content-Type' => self::DEFAULT_CONTENT_TYPE,
                 'Accept' => self::DEFAULT_ACCEPT_HEADER,
                 'User-Agent' => self::USER_AGENT
-            ]
-        ];
+            )
+        );
     }
 }

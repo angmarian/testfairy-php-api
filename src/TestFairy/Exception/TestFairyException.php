@@ -10,7 +10,7 @@ class TestFairyException extends BadResponseException
     /**
      * @var array
      */
-    private $errors = [];
+    private $errors = array();
 
     /**
      * Simple exception factory for creating Intercom standardised exceptions
@@ -22,7 +22,7 @@ class TestFairyException extends BadResponseException
     public static function factory(RequestInterface $request, Response $response)
     {
         $response_json = $response->json();
-        $intercom_unavailable_error = NULL;
+        $intercom_unavailable_error = null;
 
         if (!static::isValidTestFairyError($response_json)) {
             if ($response->isServerError()) {
@@ -45,13 +45,13 @@ class TestFairyException extends BadResponseException
         }
 
         $message = $label . PHP_EOL . implode(
-                PHP_EOL,
-                array(
-                    '[status code] ' . $response->getStatusCode(),
-                    '[reason phrase] ' . $response->getReasonPhrase(),
-                    '[url] ' . $request->getUrl(),
-                )
-            );
+            PHP_EOL,
+            array(
+                '[status code] ' . $response->getStatusCode(),
+                '[reason phrase] ' . $response->getReasonPhrase(),
+                '[url] ' . $request->getUrl(),
+            )
+        );
 
         $e = new $class($message);
         $e->setResponse($response);
@@ -60,10 +60,10 @@ class TestFairyException extends BadResponseException
         // Sets the errors if the error response is the standard Intercom error type
         if (static::isValidTestFairyError($response_json)) {
             $e->setErrors($response_json['errors']);
-        } elseif($intercom_unavailable_error != NULL) {
-            $e ->setErrors([array(
+        } elseif ($intercom_unavailable_error != null) {
+            $e ->setErrors(array(array(
               'code' => 'service_unavailable',
-              "message" => $intercom_unavailable_error)]);
+              "message" => $intercom_unavailable_error)));
         }
 
         return $e;
