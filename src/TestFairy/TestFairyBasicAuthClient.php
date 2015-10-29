@@ -32,7 +32,7 @@ class TestFairyBasicAuthClient extends TestFairyAbstractClient
      * @param array $config
      * @return Client|TestFairyBasicAuthClient
      */
-    public static function factory($config = [])
+    public static function factory($config = array())
     {
         $client = new self();
 
