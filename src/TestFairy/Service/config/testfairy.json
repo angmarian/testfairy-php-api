@@ -1,0 +1,7 @@
+{
+    "name": "TestFairy API",
+    "description": "The TestFairy API",
+    "includes": [
+        "testfairy_public.json"
+    ]
+}

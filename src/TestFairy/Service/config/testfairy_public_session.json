@@ -1,0 +1,45 @@
+{
+    "name": "TestFairy API (Session)",
+    "description": "The TestFairy API (Session)",
+    "operations": {
+        "getSessions": {
+            "httpMethod": "GET",
+            "parameters": {
+                "project_id": {
+                    "location": "uri",
+                    "required": true,
+                    "type": "string"
+                },
+                "build_id": {
+                    "location": "uri",
+                    "required": true,
+                    "type": "integer"
+                }
+            },
+            "summary": "Gets a list of all sessions",
+            "uri": "projects/{project_id}/builds/{build_id}/sessions/"
+        },
+        "getSession": {
+            "httpMethod": "GET",
+            "parameters": {
+                "project_id": {
+                    "location": "uri",
+                    "required": true,
+                    "type": "string"
+                },
+                "build_id": {
+                    "location": "uri",
+                    "required": true,
+                    "type": "integer"
+                },
+                "session_id": {
+                    "location": "uri",
+                    "required": true,
+                    "type": "string"
+                }
+            },
+            "summary": "Get a session data",
+            "uri": "projects/{project_id}/builds/{build_id}/sessions/{session_id}"
+        }
+    }
+}

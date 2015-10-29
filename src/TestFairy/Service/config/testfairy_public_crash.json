@@ -1,0 +1,23 @@
+{
+    "name": "TestFairy API (Crash)",
+    "description": "The TestFairy API (Crash)",
+    "operations": {
+        "getCrashes": {
+            "httpMethod": "GET",
+            "parameters": {
+                "project_id": {
+                    "location": "uri",
+                    "required": true,
+                    "type": "string"
+                },
+                "build_id": {
+                    "location": "uri",
+                    "required": true,
+                    "type": "integer"
+                }
+            },
+            "summary": "Gets a list of all crashes",
+            "uri": "projects/{project_id}/builds/{build_id}/crashes"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "TestFairy API (Project)",
+    "description": "The TestFairy API (Project)",
+    "operations": {
+        "getProjects": {
+            "httpMethod": "GET",
+            "summary": "Gets a list of projects",
+            "uri": "projects"
+        }
+    }
+}

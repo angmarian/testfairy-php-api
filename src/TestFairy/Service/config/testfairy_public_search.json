@@ -1,0 +1,79 @@
+{
+    "name": "TestFairy API (Search)",
+    "description": "The TestFairy API (Search)",
+    "operations": {
+        "search": {
+            "httpMethod": "GET",
+            "extends": "_abstract_pagination_page",
+            "parameters": {
+                "testerEmail": {
+                    "location": "query",
+                    "required": false,
+                    "type": "string"
+                },
+                "loaded": {
+                    "location": "query",
+                    "required": false,
+                    "type": "string"
+                },
+                "notLoaded": {
+                    "location": "query",
+                    "required": false,
+                    "type": "string"
+                },
+                "isCrashed": {
+                    "location": "query",
+                    "required": false,
+                    "type": "boolean"
+                },
+                "isNotCrashed": {
+                    "location": "query",
+                    "required": false,
+                    "type": "boolean"
+                },
+                "dateFrom": {
+                    "location": "query",
+                    "required": false,
+                    "type": "string"
+                },
+                "dateTo": {
+                    "location": "query",
+                    "required": false,
+                    "type": "string"
+                },
+                "durationFrom": {
+                    "location": "query",
+                    "required": false,
+                    "type": "string"
+                },
+                "durationTo": {
+                    "location": "query",
+                    "required": false,
+                    "type": "string"
+                },
+                "ip": {
+                    "location": "query",
+                    "required": false,
+                    "type": "string"
+                },
+                "projectId": {
+                    "location": "query",
+                    "required": false,
+                    "type": "string"
+                },
+                "buildId": {
+                    "location": "query",
+                    "required": false,
+                    "type": "integer"
+                },
+                "correlationId": {
+                    "location": "query",
+                    "required": false,
+                    "type": "string"
+                }
+            },
+            "summary": "Search sessions",
+            "uri": "search"
+        }
+    }
+}

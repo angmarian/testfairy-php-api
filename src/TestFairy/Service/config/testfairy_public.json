@@ -1,0 +1,15 @@
+{
+    "name": "TestFairy API",
+    "apiVersion": "3",
+    "baseUrl": "https://app.testfairy.com/api/1/",
+    "description": "The TestFairy API",
+    "includes": [
+        "testfairy_public_project.json",
+        "testfairy_public_build.json",
+        "testfairy_public_session.json",
+        "testfairy_public_crash.json",
+        "testfairy_public_tester.json",
+        "testfairy_public_search.json",
+        "testfairy_public_abstract_operations.json"
+    ]
+}

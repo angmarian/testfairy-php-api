@@ -1,0 +1,40 @@
+{
+    "name": "TestFairy API (Tester)",
+    "description": "The TestFairy API (Tester)",
+    "operations": {
+        "getTesters": {
+            "httpMethod": "GET",
+            "summary": "Gets a list of all testers",
+            "uri": "testers"
+        },
+        "getBuildTesters": {
+            "httpMethod": "GET",
+            "parameters": {
+                "project_id": {
+                    "location": "uri",
+                    "required": true,
+                    "type": "string"
+                },
+                "build_id": {
+                    "location": "uri",
+                    "required": true,
+                    "type": "string"
+                }
+            },
+            "summary": "Gets get a list of all build testers",
+            "uri": "projects/{project_id}/builds/{build_id}/testers"
+        },
+        "addTester": {
+            "httpMethod": "POST",
+            "parameters": {
+                "email": {
+                    "location": "postField",
+                    "required": true,
+                    "type": "string"
+                }
+            },
+            "summary": "Add a new tester",
+            "uri": "testers/"
+        }
+    }
+}

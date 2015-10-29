@@ -1,0 +1,23 @@
+
+{
+    "name": "TestFairy API (Abstract Commands)",
+    "description": "The TestFairy API (Abstract Commands)",
+    "operations": {
+        "_abstract_pagination_page": {
+            "httpMethod": "GET",
+            "parameters": {
+                "page": {
+                    "location": "query",
+                    "type": "string"
+                },
+                "perPage": {
+                    "location": "query",
+                    "maximum": 99,
+                    "required": false,
+                    "type": "integer"
+                }
+            },
+            "summary": "Abstract definition to allow pagination params in calls by extending this method"
+        }
+    }
+}
